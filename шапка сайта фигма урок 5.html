@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru" >
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma Wireframe Kit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,200&display=swap">
+<link rel="stylesheet" href="/Assets/styles/normalize.css" > 
+<link rel="stylesheet" href="/Assets/styles/style.css"> 
+<style>
+
+body {
+background-color: rgba(60,100,177,0.06)}
+header {
+position: absolute;
+height: 88px;
+left: 0px;
+right: 0px;
+top: 0px;
+}
+
+#logo {
+position: absolute;
+height: 32px;
+left: 0px;
+right: 0px;
+top: calc(50% - 32px/2);}
+
+.menu{
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px;
+position: absolute;
+width: 250px;
+height: 18px;
+left: calc(50% - 223px/2);
+top: calc(50% - 18px/2);
+text-decoration:none;
+font-family: Mulish;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 18px;
+color: #373F41;
+}
+.menu:hover {
+    text-decoration: underline;
+}
+.menu:visited {
+    color: pink;
+} 
+
+#about, #products, #contact, #help {position: static; height: 18px;}
+#about{
+width: 59px;
+left: calc(50% - 59px/2 - 82px);
+top: calc(50% - 18px/2);
+}
+#products {
+width: 47px;
+left: calc(50% - 47px/2 + 3px);
+top: calc(50% - 18px/2);
+}
+#contact{
+width: 53px;
+left: calc(50% - 53px/2 + 85px);
+top: calc(50% - 18px/2);
+}
+#help {
+width: 61px;
+left: calc(50% - 61px/2 + 127.5px);
+top: calc(50% - 18px/2);
+}
+.buttonheader{
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: absolute;
+width: 212px;
+height: 42px;
+right: 165px;
+top: calc(50% - 42px/2);
+}
+.buttonheader:enabled{
+    background:rgba(60,100,177,0.08);
+}
+#signup, #signin{
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 12px 18px;
+position: static;
+width: 106px;
+height: 42px;
+font-family: Mulish;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 18px;
+text-align: center;
+letter-spacing: 0.3px;}
+
+#signin{
+right: 126px;
+top: calc(50% - 42px/2);
+color: #3C64B1;
+}
+#signup{
+right: 0px;
+top: calc(50% - 42px/2);
+background: #3C64B1;
+color: #FFFFFF;
+}
+main{
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 100px;
+}
+#title {
+position: static;
+width: 730px;
+height: 112px;
+left: 355px;
+top: 50px;
+font-family: 'Jost', sans-serif;
+font-style: normal;
+font-size: 44px;
+line-height: 56px;
+text-align: center;
+letter-spacing: 0.2px;
+color: #373F41;
+}
+#text {
+position: static;
+width: 730px;
+height: 44px;
+left: calc(50% - 730px/2);
+top: 144px;
+font-family: Mulish;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 22px;
+text-align: center;
+letter-spacing: 0.3px;
+color: #737B7D;
+}
+input,textarea { width: 250px}
+
+input:required { 
+border: 1px solid red
+ }
+ input#e-mail:focus {
+     background: #ffe111; 
+     border: 1px solid #29B0D9;
+ }
+
+.polling_message {
+  color: white;
+  float: left;
+  margin-right: 2%;
+}
+
+.view_port {
+  background-color: rgba(60,100,177,1);
+  height: 25px;
+  width: 250px;
+  overflow: hidden;
+}
+
+.cylon_eye {
+  background-color: blue;
+  background-image: -webkit-linear-gradient(    left, rgba( 0,0,0,0.9 ) 5%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 85%);
+  background-image:    -moz-linear-gradient(    left, rgba( 0,0,0,0.9 ) 5%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 85%);
+  background-image:      -o-linear-gradient(    left, rgba( 0,0,0,0.9 ) 5%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 85%);
+  background-image:         linear-gradient(to right, rgba( 0,0,0,0.9 ) 5%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 85%);
+  color: white;
+  height: 100%;
+  width: 20%;
+
+  -webkit-animation: 4s linear 0s infinite alternate move_eye;
+     -moz-animation: 4s linear 0s infinite alternate move_eye;
+       -o-animation: 4s linear 0s infinite alternate move_eye;
+          animation: 4s linear 0s infinite alternate move_eye;
+}
+
+@-webkit-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+   @-moz-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+     @-o-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+        @keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+
+
+
+</style>
+
+
+
+</head>
+
+<body>
+    <header> 
+<div> 
+<img id="logo" src="assets/images/logo.png" alt="logo"></div>  
+        
+<nav class="menu"> 
+    <a class="menu" id="about" href="About.html">About</a> 
+    <a class="menu" id="products" href="Products.html">Products</a> 
+    <a class="menu"  id="contact" href="Contact.html">Contact</a> 
+    <a class="menu" id="help" href="Help.html">Help</a>      
+</nav>
+
+ <div class="buttonheader">
+<button class="buttonheader" id="signin">Sign in</button>
+<button class="buttonheader" id="signup">Sign up</button></div>
+
+ </header>
+ 
+    <main id="content">
+<h2 id="title"> Simplify your online shipping for free this month!</h2>
+<p id="text">Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum ponderum. Est audiam animal molestiae te</p>
+<button id="start"> Start free tryal</button>
+<button id="learn"> Learn more </button>
+
+
+ 
+
+
+<div class="view_port">
+  <div class="polling_message">
+   Contact us:
+  </div>
+  <div class="cylon_eye"></div>
+</div>
+<input placeholder="company's name" required>
+ <input placeholder="company's e-mail" id="e-mail">
+<textarea rows="4">  </textarea> 
+
+
+</main>      
+</body>
+</html>
